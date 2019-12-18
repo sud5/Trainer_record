@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/trainer_record/db" VERSION="20170807" COMMENT="XMLDB file for Moodle local/trainer_record"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="trainer_record" COMMENT="emails to be processed, send or that have been sent">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="groupid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="pretestscore" TYPE="number" LENGTH="10" NOTNULL="true" SEQUENCE="false" DECIMALS="2"/>
+        <FIELD NAME="preteachback1" TYPE="number" LENGTH="10" NOTNULL="true" SEQUENCE="false" DECIMALS="2" />
+        <FIELD NAME="preteachback2" TYPE="number" LENGTH="10" NOTNULL="true" SEQUENCE="false" DECIMALS="2" />
+        <FIELD NAME="preteachback3" TYPE="number" LENGTH="10" NOTNULL="true" SEQUENCE="false" DECIMALS="2" />
+        <FIELD NAME="posttestscore" TYPE="number" LENGTH="10" NOTNULL="true" SEQUENCE="false" DECIMALS="2" />
+        <FIELD NAME="liveobservation1" TYPE="number" LENGTH="10" NOTNULL="true" SEQUENCE="false" DECIMALS="2" />
+        <FIELD NAME="modeobservation1" TYPE="text" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="observationdate1" TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="tclocation1" TYPE="text" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="liveobservation2" TYPE="number" LENGTH="10" NOTNULL="false" DEFAULT="-1" SEQUENCE="false" DECIMALS="2" />
+        <FIELD NAME="modeobservation2" TYPE="char" LENGTH="50" NOTNULL="false" DEFAULT="null" SEQUENCE="false"/>
+        <FIELD NAME="observationdate2" TYPE="int" LENGTH="20" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="tclocation2" TYPE="char" LENGTH="50" NOTNULL="false"  SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
